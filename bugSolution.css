@@ -1,0 +1,13 @@
+The solution is simple: Ensure that the parent element of the element using `calc()` has its own width and height explicitly defined.  Here's the corrected CSS:
+```css
+.container {
+  width: 300px; /* Explicit width */
+  height: 200px; /* Explicit height */
+}
+
+.element {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+}
+```
+By setting `width` and `height` on the `.container`, we provide the necessary context for `calc()` to correctly compute the element's dimensions. Now, the element's width and height will be 280px and 180px respectively.
