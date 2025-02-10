@@ -1,0 +1,8 @@
+The following CSS code snippet demonstrates an uncommon error that can occur when using the `calc()` function:  
+```css
+.element {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+}
+```
+This code intends to make an element's width and height 20 pixels less than 100% of their containing element's dimensions. However, if the containing element doesn't have explicitly defined dimensions (e.g., `width` and `height`), `calc()` might not work as expected. It is important to note that `calc()` doesn't inherently resolve percentage values until the containing element has its dimensions determined.  In this case, you'll need to set explicit dimensions on the containing element.
